@@ -9,7 +9,9 @@
 import Foundation
 import Vapor
 
-struct Friend {
+struct Friend: Model {
+    
+    var exists: Bool = false
     var id: Node?
     let name: String
     let nationalityByHeart: String
@@ -34,7 +36,8 @@ struct Friend {
         return try Node(node: ["id":id,
                                "name":name,
                                "nationalityByHeart": nationalityByHeart,
-                               "email": email])
+                               "email": email
+            ])
     }
     
     //preparation
