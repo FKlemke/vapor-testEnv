@@ -46,6 +46,7 @@ drop.get("friends") { req in
     return try JSON(node: friendsDictionary)
 }
 
+
 drop.post("friend") { req in
     var friend = try Friend(node: req.json)
     //to save the instance to the database
