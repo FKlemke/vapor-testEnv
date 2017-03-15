@@ -13,9 +13,9 @@ struct Friend: Model {
     
     var exists: Bool = false
     var id: Node?
-    var name: String
-    var nationalityByHeart: String
-    var email: String
+    let name: String
+    let nationalityByHeart: String
+    let email: String
     
     init(name: String, nationalityByHeart: String, email: String) {
         self.name = name
@@ -42,8 +42,9 @@ struct Friend: Model {
 //        }
 //        name = "gregor"
 //        nationalityByHeart = "korean"
-        
 //        email = "shakes@fitches.com"
+        
+        
         name = try node.extract("name")
         nationalityByHeart = try node.extract("nationalitybyheart")
         email = try node.extract("email")
